@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="estilos_login.css">
+  </head>
+  <body>
+    <h1>Login Clientes</h1>
+    <div class="formulario">
+      <div  id="mensaje" style ="color: red;"></div>
+        <h2>Login</h2>
+        <input type="text" class="control_input" name="user" id="user" placeholder="Ingrese su usuario" value="" required>
+        <input type="password" class="control_input" name="password" id="password" placeholder="Ingrese su password" value="" required>
+        <input type="submit" class="boton" name="registro" value="Entrar" onclick="datosLogin()">
+        <center><p><a href="index.php">Realize el registro</a></p></center>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../modelo/recover.js"></script>
+  </body>
+</html>

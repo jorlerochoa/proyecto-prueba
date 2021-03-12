@@ -1,0 +1,86 @@
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.control_input{
+  width: 20%;
+  background: #CCD1D1;
+  padding: 5PX;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  border: 1px solid #FEFEFE;
+  font-family: 'calibri light';
+  font-size: 18px;
+  border-color: #3498DB;
+}
+.formulario h2{
+  font-size: 22px;
+  margin-bottom: 1px;
+  color: #17202A;
+  font-family: 'calibri light';
+  padding: 10PX;
+}
+
+.formulario label{
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #17202A;
+  font-family: 'calibri light';
+  padding: 5PX;
+  margin-left: 16px;
+}
+.clase_tabla{
+  width: 80%;
+  text-align: left;
+  border: solid 1px black;
+  border-collapse: collapse;
+  font-family: 'calibri light';
+  margin-left: 16px;
+}
+.clase_tabla th {
+  padding: 10px;
+  border-collapse: collapse;
+}
+.clase_tabla td {
+  padding: 10px;
+}
+thead{
+  background-color: #102EEF;
+  color: #FDFEFE;
+  border-bottom: solid 5px #2C3E50;
+}
+tr:nth-child(even){
+  background-color: #ddd;
+}
+tr:hover{
+    border-bottom: solid 2px #2C3E50;
+    font-weight: bold;
+}
+.formulario .enlace a{
+  font-size: 18px;
+  position: fixed;
+  margin-top: 0px;
+  margin: auto;
+  margin-left: 900px;
+  color: #C0392B;
+  font-family: 'calibri light';
+  text-decoration: none;
+
+}
+.formulario .label{
+  margin: auto;
+  margin-left: 16px;
+  position: static;
+}
+.formulario .enlace img{
+  width: 50px; height: 50px;
+  margin-left: 1000px;
+  position: fixed;
+
+  margin-top: 0px;
+  align: left;
+}

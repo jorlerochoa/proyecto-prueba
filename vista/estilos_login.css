@@ -1,0 +1,68 @@
+
+*{  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+
+  background-image: url('fondo-de-pantalla.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ h1{
+  font-family: 'calibri light';
+  color: white;
+  margin:auto;
+  margin-left: 16px;
+  box-shadow: 1px 1px 1px #F8FC17;
+  text-shadow: 1px 1px 2px #000;
+
+}
+.formulario{
+
+  width: 400px;
+  background: #EAEBF5;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri light';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+.formulario h2{
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #17202A;
+}
+.control_input{
+
+  width: 100%;
+  background: #FDFEFE;
+  padding: 10PX;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #FEFEFE;
+  font-family: 'calibri light';
+  font-size: 18px;
+}
+.formulario .boton{
+  width: 100%;
+  background:#102EEF;
+  border: none;
+  padding: 12px;
+  margin: 16px 0;
+  font-size: 16px;
+  color: #FDFEFE;
+}
+.formulario .boton:hover{
+
+  background:#237EF3;
+  color: #2C3E50;
+
+}
+.formulario .mensaje{
+  color: #CB4335;
+}
