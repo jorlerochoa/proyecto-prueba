@@ -19,7 +19,7 @@ function validaDatos(){
   }
 }
 function   registrarCliente($documento,$nombre,$apellido,$email,$ciudad,$user,$password){
-
+ 
   $cliente =new Cliente();
   $cliente->setClienteDocumento($documento);
   $cliente->setClienteNombre($nombre);

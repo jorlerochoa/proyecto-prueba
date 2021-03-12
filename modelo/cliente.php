@@ -110,6 +110,11 @@ include '../controlador/registroDatos.php';
               window.location='../vista/index.php'
             </script>";
     }
+    else{
+      echo "<script>alert('ya existe un registro con el mismo documento o password');
+              window.location='../vista/index.php'
+            </script>";
+    }
   }
 }
 ?>

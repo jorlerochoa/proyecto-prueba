@@ -8,6 +8,15 @@ class RegistroDatos extends Conexion
 
     public function InsertDatos($documento,$nombre,$apellido,$email,$ciudad,$user,$password){
 
+      $select= "select * from cliente where cliente_documento=$documento or cliente_password=md5('$password')";
+
+      $resultSelect=$this->conexion->query($select);
+
+      if($resultSelect->num_rows> 0){
+
+          return false;
+      }
+
       $insert= "insert into cliente values(default,$documento,upper('$nombre'),upper('$apellido'),'$email',$ciudad,'$user',md5('$password'))";
 
       $result=$this->conexion->query($insert);

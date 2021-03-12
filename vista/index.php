@@ -1,5 +1,5 @@
 <?php
-include '../controlador/datos.php';
+include '../modelo/datos.php';
 $datos= new Datos();
 ?>
 
@@ -15,18 +15,19 @@ $datos= new Datos();
     <div class="formulario">
         <h2>Datos</h2>
       <form class="" action="../modelo/validaDatos.php" method="post">
-
-        <input type="text" class="control_input" name="cliente_documento" id="cliente_documento" placeholder="Ingrese su cedula" value="" required>
+        <div style="display:none;" id="validadocumento_oculto"><p class="mensaje">El campo documento debe ser numerico</p></div>
+        <input type="text" class="control_input" name="cliente_documento" id="cliente_documento" placeholder="Ingrese su cedula" value="" required onblur="compruebaDocumento()">
         <input type="text" class="control_input" name="cliente_nombre" id="cliente_nombre" placeholder="Ingrese su nombre" value="" required>
         <input type="text" class="control_input" name="cliente_apellido" id="cliente_apellido" placeholder="Ingrese su apellido" value="">
         <select name="ciudad_id" class="control_input">
             <option value="" selected>Seleccione ciudad</option>
             <?php echo $datos->datosSelect();?>
-
-          </select>
+        </select>
         <input type="text" class="control_input" name="cliente_email" id="cliente_email" placeholder="Ingrese su email" value="" required>
         <input type="text" class="control_input" name="cliente_user" id="cliente_user" placeholder="Ingrese su usuario" value="" required>
-        <input type="password" class="control_input" name="cliente_password" id="cliente_password" placeholder="Ingrese su password" value="" required>
+        <div style="display:none;" id="validaextension_oculto"><p class="mensaje">El password debe tener minimo cuatro caracteres</p></div>
+
+        <input type="password" class="control_input" name="cliente_password" id="cliente_password" placeholder="Ingrese su password" value="" required onblur="compruebaExtencionPassword()">
         <input type="password" class="control_input" name="confirm_password" id="confirm_password" placeholder="Confirme su password" value="" required onblur="compruebaPassword()">
         <div style="display:none;" id="id_oculto"><p class="mensaje">Los valores de password ingresados no coinciden</p></div>
         <input type="submit" class="boton" name="registro" id="registro" value="Registrar">

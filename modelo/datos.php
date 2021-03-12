@@ -1,5 +1,5 @@
 <?php
-include '../modelo/cliente.php';
+include 'cliente.php';
 /**
  *En esta clase extiende de la clase cliente y estan todas las funciones requeridas para las operaciones con un objeto cliente
  */
@@ -49,11 +49,4 @@ if(isset($_POST['credenciales'])){
 elseif(isset($_POST['consulta'])){
     $datos->traerDatos();
 }
-
-
-
-
-
-
-
- ?>
+?>

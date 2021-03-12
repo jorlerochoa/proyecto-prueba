@@ -2,7 +2,7 @@ $(cargar('0'));
 
 function cargar(consulta){
   $.ajax({
-      url: '../controlador/datos.php',
+      url: '../modelo/datos.php',
       type: 'POST',
       dataType: 'html',
       data:{consulta: consulta},
@@ -41,9 +41,37 @@ function compruebaPassword(){
   }
 }
 
+function compruebaDocumento(){
+  var documento = document.getElementById('cliente_documento').value;
+
+  if(!/^[(0-9)]*$/.test(documento)) {
+      document.getElementById("validadocumento_oculto").style.display = "block";
+      document.getElementById('registro').disabled=true;
+      document.getElementById('cliente_documento').style.borderColor="#CB4335";
+  }
+  else{
+      document.getElementById("validadocumento_oculto").style.display = "none";
+      document.getElementById('registro').disabled=false;
+  }
+}
+
+function compruebaExtencionPassword(){
+  var documento = document.getElementById('cliente_password').value.length;
+console.log(documento);
+  if(documento < 4) {
+      document.getElementById("validaextension_oculto").style.display = "block";
+      document.getElementById('registro').disabled=true;
+      document.getElementById('cliente_password').style.borderColor="#CB4335";
+  }
+  else{
+      document.getElementById("validaextension_oculto").style.display = "none";
+      document.getElementById('registro').disabled=false;
+  }
+}
+
 function ValidaLogin(credenciales){
   $.ajax({
-      url: '../controlador/datos.php',
+      url: '../modelo/datos.php',
       type: 'POST',
       dataType: 'html',
       data:{credenciales: credenciales},
@@ -64,7 +92,4 @@ function datosLogin(){
   if(credenciales != ""){
     ValidaLogin(credenciales);
   }
-
-
-
 }
