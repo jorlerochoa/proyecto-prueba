@@ -58,7 +58,7 @@ CREATE TABLE `cliente` (
   PRIMARY KEY (`cliente_id`,`cliente_documento`),
   KEY `id_ciudad` (`id_ciudad`),
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`id_ciudad`) REFERENCES `ciudad` (`ciudad_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1,'11147855114','JUAN','PEREZ','email@.com',1,'user','698d51a19d8a121ce581499d7b701668');
+INSERT INTO `cliente` VALUES (9,'1100458777','JUAN','PEREZ','mail@perez',1,'userjuan','b59c67bf196a4758191e42f76670ceba'),(10,'1110479655','PEDRO','SUAREZ','pedro@mail',2,'pedro_suarez','3b712de48137572f3849aabd5666a4e3'),(11,'111478444','ANGIE','TOVAR','angie@mail',1,'angie','4a7d1ed414474e4033ac29ccb8653d9b');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-12 10:44:48
+-- Dump completed on 2021-03-12 16:41:35
