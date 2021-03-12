@@ -1,6 +1,6 @@
 <?php
 include '../controlador/datos.php';
-$datos= new Datos('dato');
+$datos= new Datos();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $datos= new Datos('dato');
         <input type="text" class="control_input" name="cliente_apellido" id="cliente_apellido" placeholder="Ingrese su apellido" value="">
         <select name="ciudad_id" class="control_input">
             <option value="" selected>Seleccione ciudad</option>
-            <?php echo $datos->datosSelect()?>
+            <?php echo $datos->datosSelect();?>
 
           </select>
         <input type="text" class="control_input" name="cliente_email" id="cliente_email" placeholder="Ingrese su email" value="" required>

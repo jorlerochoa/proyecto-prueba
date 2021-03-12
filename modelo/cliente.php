@@ -77,7 +77,22 @@ include '../controlador/registroDatos.php';
 
     return $this->ciudad_id;
   }
- 
+
+  protected function retrieveByDocument($documento){
+
+    return $this->registro->returnDatos($documento);
+  }
+
+  protected function loginCliente($arrayCredenciales){
+
+    return $this->registro->Login($arrayCredenciales);
+  }
+
+  protected function selectCiudad(){
+
+    return $this->registro->selectCiudad();
+  }
+
   public function save(){
 
     $sucess=$this->registro->InsertDatos($this->getClienteDocumento(),
